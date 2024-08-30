@@ -1,0 +1,14 @@
+[versions]
+kotlin = "2.0.20"
+
+[libraries]
+jdbc-postgresql = { module = "org.postgresql:postgresql", version = "42.7.4" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
+liquibase-core = { module = "org.liquibase:liquibase-core", version = "4.29.1" }
+picocli = { module = "info.picocli:picocli", version = "4.7.6" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+liquibase = { id = "org.liquibase.gradle", version = "2.2.2" }
+
+[bundles]
