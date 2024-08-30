@@ -43,6 +43,12 @@ tasks.withType<KotlinCompile> {
 // current working directory
 val thisDir: String = System.getProperty("user.dir")
 
+buildscript {
+  dependencies {
+    classpath(libs.liquibase.core)
+  }
+}
+
 liquibase { // configure liquibase gradle task with local dev db connection details
   activities {
     create("main") {
@@ -55,8 +61,10 @@ liquibase { // configure liquibase gradle task with local dev db connection deta
         "username" to "postgres",
         "password" to "postgres",
         "driver" to "org.postgresql.Driver",
-         "log-level" to "DEBUG",
+//         "log-level" to "DEBUG", // this doesn't seem to work; using jvmArgs instead works
       )
     }
   }
+
+  jvmArgs = listOf("-Dliquibase.logLevel=DEBUG")
 }
