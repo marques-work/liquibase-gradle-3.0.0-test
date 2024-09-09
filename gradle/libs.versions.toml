@@ -9,6 +9,6 @@ picocli = { module = "info.picocli:picocli", version = "4.7.6" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-liquibase = { id = "org.liquibase.gradle", version = "3.0.0" }
+liquibase = { id = "org.liquibase.gradle", version = "3.0.1-SNAPSHOT" }
 
 [bundles]

@@ -55,8 +55,8 @@ liquibase { // configure liquibase gradle task with local dev db connection deta
       arguments = mapOf(
         // the liquibase gradle task is nothing more than a frontend to the liquibase command-line runner.
         // this key-value map will be transformed into command-line flags and passed to the runner.
-        "changelog-file" to "changelog.xml",
-        "search-path" to "$thisDir/src/main/resources",
+        "changelogFile" to "changelog.xml",
+        "searchPath" to "$thisDir/src/main/resources",
         "url" to "jdbc:postgresql://localhost:6432/postgres",
         "username" to "postgres",
         "password" to "postgres",
