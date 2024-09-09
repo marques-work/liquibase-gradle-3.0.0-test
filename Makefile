@@ -16,7 +16,7 @@ teardown:           ## Tear down containers
 
 .PHONY: migrate
 migrate:            ## Run liquibase migrations
-	@./gradlew update --info
+	@./gradlew update
 
 .PHONY: psql
 psql:               ## Connect to the database with a `psql` session

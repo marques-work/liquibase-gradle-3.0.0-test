@@ -61,10 +61,8 @@ liquibase { // configure liquibase gradle task with local dev db connection deta
         "username" to "postgres",
         "password" to "postgres",
         "driver" to "org.postgresql.Driver",
-//         "log-level" to "DEBUG", // this doesn't seem to work; using jvmArgs instead works
+//         "log-level" to "DEBUG"
       )
     }
   }
-
-  jvmArgs = listOf("-Dliquibase.logLevel=DEBUG")
 }
